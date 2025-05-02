@@ -1,0 +1,14 @@
+img{
+    height: 50px;
+    width: 150px;
+    margin-right: 20px;
+}
+.linea{
+    height: 10px;
+    background-color: rgb(115, 115, 187);
+    margin-bottom: 50px;
+}
+a:hover{
+    background-color: rgb(191, 191, 226);
+    border-radius: 5px;
+}

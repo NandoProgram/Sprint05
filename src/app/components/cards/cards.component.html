@@ -1,0 +1,55 @@
+@if(tipo==1){
+    <div style="width: 18rem;" class="card h-100 d-flex flex-column justify-content-around card">
+        <img [src]="cuadro.image" alt="{{cuadro.name}}" class="card-img-top">
+        <div class="card-body titulo">
+            <h5 class="card-title">{{cuadro.name}}</h5>
+        </div>
+        <div class="card-footer ">
+            <div class="d-flex justofy-content-between final">
+                <p>$ {{cuadro.precio}}</p>
+                <a (click)="addCuadro()">Agregar al carrito</a>
+            </div>
+        </div>
+    </div>
+}@else if (tipo==2) {
+    <div class="card mb-12 carta">
+        <div class="row g-0">
+
+          <div class="col-md-4">
+            <img [src]="cuadro.image" class="img-fluid rounded-start" alt="...">
+          </div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{cuadro.name}}</h5>
+              <p>Precio: $ {{cuadro.precio}}</p>
+              <button type="button" class="btn btn-danger" (click)="removeCuadro()">Eliminar</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+}
+@else if(tipo==3){
+  <div class="card mb-12 carta">
+    <div class="row g-0">
+
+      <div class="col-md-4">
+        <img [src]="cuadro.image" class="img-fluid rounded-start" alt="...">
+      </div>
+
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{cuadro.name}}</h5>
+          <p>Pedido en espera</p>
+          <p>Precio: $ {{cuadro.precio}}</p>
+          <button type="button" class="btn btn-danger" (click)="removePedido()">Cancelar Pedido</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+}

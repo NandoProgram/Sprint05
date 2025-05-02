@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        @if(favorito.length==-0){
+            <div class="solo">
+                Aun no hay articulos en el carrito
+            </div>
+        }@else {
+            @for (p of favorito; track p) {
+                <div class="col-sm-12">
+                    <app-cards [cuadro]="cuadros[p]" [tipo]="2" (idAdd)="eliminarCuadro($event)"></app-cards>
+                </div>
+            }
+            
+            <hr>
+
+            <div class="compra">
+                <div >
+                    Total: $ {{total}}
+                </div>
+                <div>
+                    <button type="button" class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+                </div>
+            </div>
+        }
+        
+    </div>
+</div>

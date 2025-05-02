@@ -1,0 +1,16 @@
+div{
+    width: 60%;
+    margin: 0 auto;
+}
+img{
+    height: 400px;
+    width: 850px;
+    background-color: rgb(115, 115, 187);
+    padding: 15px;
+    border-radius: 10px;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}

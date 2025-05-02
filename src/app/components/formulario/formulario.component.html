@@ -1,0 +1,64 @@
+<h1>Datos de envio:</h1>
+<br>
+<div class="contenedor">
+<form [formGroup]="formVenta" (ngSubmit)="comprar()">
+    <div class="form-group my-2">
+        <label for="userName">Nombre:</label>
+        <input type="text" class="form-control" id="userName" formControlName="userName" placeholder="Ingrese el nombre">
+        @if (formVenta.get('userName')?.invalid && (formVenta.get('userName')?.dirty || 
+            formVenta.get('userName')?.touched)) {
+                <div class="text-danger">Nombre requerido</div>
+            }
+    </div>
+
+    <div class="form-group my-2">
+        <label for="userLastname">Apeido:</label>
+        <input type="text" class="form-control" id="userLastname" formControlName="userLastname" placeholder="Ingrese el apeido">
+        @if (formVenta.get('userLastname')?.invalid && (formVenta.get('userLastname')?.dirty || 
+            formVenta.get('userLastname')?.touched)) {
+                <div class="text-danger">Apeido requerido XD</div>
+            }
+    </div>
+
+    <div class="form-group my-2">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" formControlName="email" placeholder="Inserte su email">
+        @if (formVenta.get('email')?.invalid && formVenta.get('email')?.dirty 
+        || formVenta.get('email')?.touched) {
+            <div class="text-danger">
+                @if (formVenta.get('email')?.errors?.['required']) {
+                    El email es requerido
+                }@else{
+                    @if (formVenta.get('email')?.errors?.['email']) {
+                        ingrese un email valido
+                    }
+                }
+            </div>
+        }
+    </div>
+
+    <div class="form-group my-2">
+        <label for="Dirreccion">Dirreccion:</label>
+        <input type="text" class="form-control" id="Dirreccion" formControlName="Dirreccion" placeholder="Ingrese su direccion">
+        @if (formVenta.get('Dirreccion')?.invalid && (formVenta.get('Dirreccion')?.dirty || 
+            formVenta.get('Dirreccion')?.touched)) {
+                <div class="text-danger">DIreccion requerida</div>
+            }
+    </div>
+
+    <div class="form-group form-check m-3">
+        <input type="checkbox" class="form-check-input" id="agreeTerms" formControlName="agreeTerms">
+        <label for="form-check-label" for="agreeTerms">Acepto los terminos</label>
+        @if (formVenta.get('agreeTerms')?.invalid && formVenta.get('agreeTerms')?.dirty
+        || formVenta.get('agreeTerms')?.touched) {
+            <div class="text-danger">
+                @if (formVenta.get('agreeTerms')?.errors?.['required']) {
+                    Debes aceptar los terminos y condiciones
+                }
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="formVenta.invalid" (click)="comprar()">Comprar</button>
+</form>
+</div>

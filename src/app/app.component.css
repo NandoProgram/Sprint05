@@ -1,0 +1,7 @@
+app-header{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}

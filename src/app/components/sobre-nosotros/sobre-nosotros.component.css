@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    padding: 30px;
+    font-size: 25px;
+}
+img{
+    height: 500px;
+    width: 300px;
+    background-color: rgb(115, 115, 187);
+    padding: 15px;
+    border-radius: 10px;
+}
+h1{
+    padding: 30px;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.solo{
+    text-align: center;
+    font-size: 50px;
+}
+.compra{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(115, 115, 187);
+    height: 3px;
+    background-color: rgb(115, 115, 187);
+
+}

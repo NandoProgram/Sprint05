@@ -1,0 +1,19 @@
+.contenedor{
+    width: 60%;
+    border: solid black;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: rgb(115, 115, 187);
+}
+label{
+    margin: 3px;
+    font-size: 20px;
+    color: white;
+}
+h1{
+    padding: 30px;
+    font-weight: bold;
+    color: rgb(115, 115, 187);
+
+}
