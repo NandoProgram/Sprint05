@@ -4,7 +4,7 @@ import { Cuadro } from "../Types/Cuadro";
 export const data: Cuadro[]=[
     {
         _id: 1,
-        name:"Reflejo vacio 1",
+        name:"Reflejo vacio",
         description:"este es el primer cuadro",
         precio:1000,
         image:"/img-1.png"
